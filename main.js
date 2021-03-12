@@ -88,22 +88,34 @@ function reviewQuestion(a, rightAnswer) {
 
     questionsAnswered++;
 
-    if (questionsAnswered == 5) {
+    if (questionsAnswered == 3) {
         showScore();
     } else {
         getCountries();
     }
 }
+function showMsg(){
+    if(questionsRight == 0){
+       message= "<h4>Please try again</h4>"
+    }
+    else if(questionsRight == 1 ||  questionsRight == 2){
+        message="<h4>Please keep practice more</h4>"
+    }
+    else{
+        message="<h4>Well Done!</h4>"
+    }
+    return message
+}
 
 function showScore() {
-    total = questionsWrong + questionsRight
+    let total = questionsWrong + questionsRight
     let questionContainer = document.querySelector(".question-container");
     questionContainer.innerHTML =
         "<div class='score-container'>" +
-        "<h1>Your score:</h1>" +  "<h3>" + questionsRight + "/" + (total) + "</h3>" +
-       
-        "</div>" +
+        "<h2>Your score:</h2>" + 
+        "<h3>" + questionsRight + "/" + (total) + "</h3>" + showMsg() +
         "<input type='submit' value='New Game' onclick='startGame();'" +
+      
         "</div>";
     
 }

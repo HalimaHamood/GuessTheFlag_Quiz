@@ -7,7 +7,7 @@
 }
 
 .description {
-  text-align: center;
+  text-align: left;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: large;
@@ -76,15 +76,15 @@ body {
 }
 
 .question-container input {
-  width: 230px;
-  height: 55px;
-  font-size: 15px;
+  width: 210px;
+  height: 50px;
+  font-size: 17px;
   white-space: normal;
   font-family: "Lato Regular", sans-serif;
 }
 
 .container input:hover {
-  width: 210x;
+  width: 220px;
   height: 65px;
   font-size: 15px;
   transition: 250ms;
@@ -116,8 +116,9 @@ body {
     width: 200px;
   }
   .question-container input {
-    width: 150px;
-    height: 45px;
+    width: 200px;
+    margin-top: 20px;
+    height: 40px;
     font-size: 17px;
   }
   .quiz-image {
